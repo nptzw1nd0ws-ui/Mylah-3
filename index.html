@@ -1,36 +1,111 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
+<title>For Mylah 💖</title>
+
 <style>
 body {
-  background: pink;
-  text-align: center;
-  font-family: Arial;
+  background: linear-gradient(135deg, #ffb6c1, #ffd1dc);
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 #card {
-  margin: 100px auto;
-  padding: 20px;
   background: white;
-  border-radius: 10px;
-  width: 300px;
+  padding: 20px;
+  border-radius: 20px;
+  width: 320px;
+  text-align: center;
   position: relative;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+h2 {
+  color: #ff4d6d;
+}
+
+.gallery {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.gallery img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.yes {
+  background: #ff4d6d;
+  color: white;
 }
 
 #no {
+  background: #ccc;
   position: absolute;
-  transition: all 0.2s;
+  left: 180px;
+  top: 260px;
 }
 </style>
 </head>
+
 <body>
 
 <div id="card">
-  <img src="https://via.placeholder.com/100?text=🐻" alt="Cute Bear">
-  <h2>Mylah, will you be my Valentine? 💘</h2>
-  <button onclick="alert('Yaaay! ❤️ I love you, Mylah!')">Yes</button>
-  <button id="no" onmouseover="dodge()">No</button>
+  <h2>Mylah 💕</h2>
+  <p>You make my days brighter and my heart happier ✨</p>
+
+  <div class="gallery">
+    <img src="photo1.jpg">
+    <img src="photo2.jpg">
+    <img src="photo3.jpg">
+  </div>
+
+  <h3>Will you be my Valentine? 💘</h3>
+
+  <button class="yes" onclick="yesClick()">Yes 💖</button>
+  <button id="no" onmouseenter="dodge()">No 😢</button>
 </div>
 
-<script
+<script>
+function dodge() {
+  const no = document.getElementById("no");
+  no.style.left = Math.random() * 200 + "px";
+  no.style.top = Math.random() * 280 + "px";
+}
+
+function yesClick() {
+  document.body.innerHTML = `
+    <div style="
+      background: pink;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial;
+      text-align: center;
+    ">
+      <h1>💖 I love you so much, Mylah 💖<br>Forever my Valentine 🥰</h1>
+    </div>
+  `;
+}
+</script>
+
+</body>
+</
