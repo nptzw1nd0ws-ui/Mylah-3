@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+body {
+  background: pink;
+  text-align: center;
+  font-family: Arial;
+}
+
+#card {
+  margin: 100px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  width: 300px;
+  position: relative;
+}
+
+#no {
+  position: absolute;
+  transition: all 0.2s;
+}
+</style>
+</head>
+<body>
+
+<div id="card">
+  <img src="https://via.placeholder.com/100?text=🐻" alt="Cute Bear">
+  <h2>Mylah, will you be my Valentine? 💘</h2>
+  <button onclick="alert('Yaaay! ❤️ I love you, Mylah!')">Yes</button>
+  <button id="no" onmouseover="dodge()">No</button>
+</div>
+
+<script
